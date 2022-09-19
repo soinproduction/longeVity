@@ -48,6 +48,10 @@
 
 
 
+  @media (max-width: 768px){
+    --container-offset: 20px;
+  }
+
   @media (max-width: 576px){
     --container-offset: 25px;
   }

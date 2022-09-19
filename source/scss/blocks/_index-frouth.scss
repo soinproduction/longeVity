@@ -1,8 +1,5 @@
 .index-frouth {
   padding: 60px 0 50px;
-  // background-position: top;
-  // background-repeat: no-repeat;
-  // background-size: 100%;
   position: relative;
 
   &::before {
@@ -18,6 +15,10 @@
     background-repeat: no-repeat;
     background-position: center;
     z-index: -1;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__box {

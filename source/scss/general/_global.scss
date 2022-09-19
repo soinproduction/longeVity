@@ -3,6 +3,7 @@ html {
   width: 100%;
 
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
   background-color: var(--body-bg);
 
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 main {

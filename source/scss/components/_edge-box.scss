@@ -1,6 +1,6 @@
 .edge-box {
-  height: Min(100vw, 750px);
-  width: Min(100vw, 750px);
+  height: Min(90vw, 750px);
+  width: Min(90vw, 750px);
   background-size: 100% 100%;
   display: flex;
   align-items: center;
@@ -9,6 +9,11 @@
   margin: 0 auto;
   grid-gap: Min(2.4vw, 18px);
   position: relative;
+
+  @include tablet {
+    height: Min(calc(100vw - 70px), 750px);
+    width: Min(calc(100vw - 70px), 750px);
+  }
 
   &::before {
     width: Min(55vw, 1160px);
@@ -38,6 +43,10 @@
     text-fill-color: transparent;
 
     max-width: 40%;
+
+    @include mobile {
+      max-width: 45%;
+    }
   }
 
   p {
@@ -91,23 +100,41 @@
     &:nth-child(4) {
       left: -4%;
       top: 48.7%;
+
+      @include mobile {
+        left: -7vw;
+      }
+
     }
 
     &:nth-child(5) {
       right: -4%;
       top: 49.4%;
+
+      @include mobile {
+        right: -8vw;
+      }
+
     }
 
     &:nth-child(6) {
       left: -3%;
       top: 68%;
       transform: translateX(50%);
+
+      @include mobile {
+        left: -7%;
+      }
     }
 
     &:nth-child(7) {
       right: 8%;
       top: 68%;
       transform: translateX(-50%);
+
+      @include mobile {
+        right: 6%;
+      }
     }
 
     &:nth-child(8) {

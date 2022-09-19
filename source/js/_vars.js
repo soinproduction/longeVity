@@ -10,6 +10,7 @@ export default {
   header: document.querySelector("header"),
   video: [...document.querySelectorAll("[data-video]")],
   startButton: document.querySelector(".start-button"),
+  image: document.querySelector(".our-section__image"),
 }
 
 

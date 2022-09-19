@@ -9,6 +9,22 @@ header {
   justify-content: space-between;
   align-items: center;
 
+  @include tablet {
+    padding: clamp(32px, 5.208vw, 40px) 0;
+  }
+
+  .logo {
+    @include small-tablet {
+      width: clamp(93px, 22.135vw, 170px);
+      height: clamp(34px, 8.073vw, 62px);
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
   &__title {
     font-family: var(--font-family);
     font-style: normal;
@@ -16,6 +32,10 @@ header {
     font-size: 21px;
     line-height: 100%;
     color: var(--color-a);
+
+    @include small-tablet {
+      font-size: clamp(12px, 2.734vw, 21px);
+    }
 
     span {
       background: linear-gradient(90deg, #BD9B60 8.19%, #EDCE97 87.71%);

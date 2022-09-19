@@ -1,15 +1,24 @@
 .index-first {
-  padding-top: calc(10px +  var(--header-height));
+  padding-top: calc(clamp(22px, 5.859vw,60px) +  var(--header-height));
   background-size: 100% 90%;
   background-repeat: no-repeat;
   background-position: 0 -20px;
   padding-bottom: 20px;
+
+  @include tablet {
+    padding-top: calc(10px +  var(--header-height));
+    padding-bottom: clamp(32px, 6.51vw, 50px);
+  }
 
   &__box {
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-gap: clamp(39px, 8.073vw, 60px);
+
+    @include tablet {
+      grid-gap: clamp(39px, 7.813vw, 60px);
+    }
   }
 
   &__content {
@@ -28,6 +37,10 @@
     line-height: 150%;
     text-align: center;
     color: var(--color-a);
+
+    @include tablet {
+      max-width: 520px;
+    }
   }
 
   &__title {
@@ -39,6 +52,10 @@
     line-height: 150%;
     text-align: center;
     color: var(--color-a);
+
+    @include tablet {
+      font-size: clamp(14px, 2.734vw,21px);
+    }
   }
 
   &__subtitle {
@@ -54,5 +71,9 @@
     line-height: 150%;
     text-align: center;
     color: var(--color-a);
+
+    @include tablet {
+      font-size: clamp(14px, 2.734vw,21px);
+    }
   }
 }
