@@ -1,0 +1,87 @@
+.point-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 62px clamp(33px,4.151vw, 44px);
+  counter-reset: li;
+  max-width: clamp(653px, 85.026vw, 770px);
+
+  &__item {
+    padding: 47px 17px 29px !important;
+    display: grid;
+    text-align: center;
+    grid-template-rows: 1fr 60px 1fr;
+    justify-content: center;
+    grid-gap: 16px;
+    justify-items: center;
+    align-content: center;
+    background-color: var(--bg-c);
+    border-radius: 20px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      counter-increment: li;/* Инкрементирует счётчик*/
+      content: counter(li) "";
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 12px;
+      text-align: center;
+      color: var(--color-a);
+      opacity: .5;
+      top: 20px;
+    }
+
+    &:not(:last-child)::after {
+      width: 53px;
+      height: 59px;
+      background-image: url(../img/sprite/list-arrow.svg);
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      top: 50%;
+      transform: translate(60%, -50%);
+      right: 0;
+    }
+
+    svg {
+      fill: transparent;
+    }
+
+    &:first-child {
+      background: linear-gradient(89.99deg, #002C43 43.45%, #00496D 99.99%);
+    }
+
+    &:last-child {
+      background: linear-gradient(270deg, #002C43 43.45%, #00496D 99.99%);
+
+      &::before,
+      .point-list__name,
+      .point-list__descr {
+        color: var(--color-с);
+      }
+    }
+  }
+
+  &__name {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 135%;
+    color: var(--color-a);
+  }
+
+  &__descr {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: var(--color-a);
+    opacity: .5;
+  }
+}

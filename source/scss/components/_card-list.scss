@@ -1,0 +1,17 @@
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: clamp(24px, 2.925vw, 31px) Min(3.774vw, 40px);
+
+  @include small-tablet {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto !important;
+  }
+
+  @include mobile {
+    grid-template-columns: 100%;
+  }
+
+}

@@ -1,0 +1,54 @@
+.brand-box {
+  padding: clamp(30px, 3.962vw, 42px) clamp(27px, 5vw, 53px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-d);
+  border-radius: 20px;
+  grid-gap: clamp(20px, 4.34vw, 46px);
+
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    color: var(--color-f);
+    flex-shrink: 0;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+
+.brand-list {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 30px 36px;
+  justify-content: space-between;
+  max-width: 740px;
+  width: 100%;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    @include small-tablet {
+        max-width: 17vw;
+    }
+
+    @include mobile {
+      max-width: initial;
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+  }
+
+}

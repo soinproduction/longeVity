@@ -1,0 +1,18 @@
+.footer-nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    grid-gap: 25px clamp(30px, 5.189vw, 55px);
+    flex-wrap: wrap;
+  }
+
+  &__item a {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-a);
+  }
+
+}

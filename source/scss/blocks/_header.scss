@@ -1,0 +1,38 @@
+header {
+  position: absolute;
+  width: 100%;
+}
+
+.header {
+  padding: clamp(40px, 6.604vw,70px) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 100%;
+    color: var(--color-a);
+
+    span {
+      background: linear-gradient(90deg, #BD9B60 8.19%, #EDCE97 87.71%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+
+    @include mobile {
+      font-size: clapm( 12px,1.981vw,21px);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(8px, 2.736vw, 29px);
+  }
+}

@@ -1,0 +1,119 @@
+.edge-box {
+  height: Min(100vw, 750px);
+  width: Min(100vw, 750px);
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  grid-gap: Min(2.4vw, 18px);
+  position: relative;
+
+  &::before {
+    width: Min(55vw, 1160px);
+    height: Min(55vw, 1160px);
+    position: absolute;
+    pointer-events: none;
+    background: radial-gradient(50% 46% at 50% 50%, #096C9D 0%, rgba(1, 74, 110, 0) 100%);
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: .5;
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 300;
+    font-size: Min(4.267vw, 32px);
+    line-height: 140%;
+    text-align: center;
+    background: linear-gradient(90deg, #bd9b60 8.19%, #c6a978 87.71%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+    max-width: 40%;
+  }
+
+  p {
+    font-family: "Beatrice";
+    font-style: normal;
+    font-weight: 400;
+    font-size: Min(1.6vw, 12px);
+    line-height: 156%;
+    text-align: center;
+    color: var(--color-a);
+    opacity: 0.6;
+    max-width: 40%;
+  }
+
+  &__list {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: Min(1.867vw, 14px);
+    line-height: 100%;
+    text-align: center;
+    color: var(--color-с);
+    position: absolute;
+
+    &:nth-child(1) {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 13%;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      transform: translateX(-50%);
+      top: 29%;
+    }
+
+    &:nth-child(2) {
+      left: 28%;
+    }
+
+    &:nth-child(3) {
+      right: 0%;
+    }
+
+    &:nth-child(4) {
+      left: -4%;
+      top: 48.7%;
+    }
+
+    &:nth-child(5) {
+      right: -4%;
+      top: 49.4%;
+    }
+
+    &:nth-child(6) {
+      left: -3%;
+      top: 68%;
+      transform: translateX(50%);
+    }
+
+    &:nth-child(7) {
+      right: 8%;
+      top: 68%;
+      transform: translateX(-50%);
+    }
+
+    &:nth-child(8) {
+      left: 50%;
+      top: 83%;
+      transform: translateX(-50%);
+    }
+  }
+}
