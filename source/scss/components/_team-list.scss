@@ -1,0 +1,67 @@
+.team-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: clamp( 24px,3.166vw ,32px) clamp(16px, 2.83vw, 30px);
+  align-items: stretch;
+  width: 100%;
+
+  @include small-tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobile {
+    grid-template-columns: 100%;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(270deg, #004976 0%, rgba(0, 73, 118, 0) 100%);
+    border-radius: 30px;
+    padding: 47px 10px 40px !important;
+
+    p {
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 170%;
+      color: #FFFFFF;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  }
+
+  &__image {
+    border-radius: 50%;
+    margin-bottom: 32px;
+  }
+
+  &__name,
+  &__value {
+    background: linear-gradient(90deg, #BD9B60 8.19%, #C6A978 87.71%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: Min(1.509vw, 16px);
+    line-height: 120%;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__name {
+    margin-bottom: 10px;
+  }
+
+  &__value {
+    margin-bottom: 13px;
+  }
+}

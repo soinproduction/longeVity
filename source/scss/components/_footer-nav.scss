@@ -2,8 +2,9 @@
   &__list {
     display: flex;
     align-items: center;
-    grid-gap: 25px clamp(30px, 5.189vw, 55px);
+    grid-gap: 25px clamp(30px, 2.189vw, 55px);
     flex-wrap: wrap;
+    justify-content: flex-end;
 
     @include small-tablet {
       display: grid;

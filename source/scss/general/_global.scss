@@ -14,7 +14,7 @@ body {
   width: 100%;
   min-height: -webkit-fill-available;
   margin: 0;
-  padding: 0;
+  padding: var(--header-height) 0 0 0;
 
   font-weight: 400;
   font-size: 16px;
@@ -176,8 +176,10 @@ input[type="number"] {
 [data-tab-content] {
   display: none;
 
+
   &.active {
     display: block;
+    max-height: initial !important;
   }
 }
 
