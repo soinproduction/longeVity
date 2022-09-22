@@ -9,7 +9,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    grid-gap: 10px;
+    // grid-gap: 10px;
 
     @include mobile {
       grid-gap: 20px;
@@ -28,7 +28,7 @@
   &__btn {
     width: clamp(311px, 39.34vw, 417px);
     display: flex;
-    padding: 0 0 clamp(17px, 2.925vw, 31px) 0;
+    padding: 10px 0 clamp(17px, 2.925vw, 31px) 0;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -221,5 +221,18 @@
     font-size: 14px;
     line-height: 130%;
     color: var(--color-с);
+  }
+
+
+  .custom-tabs__box {
+    opacity: 0;
+    transition: max-height .6s;
+  }
+  .custom-tabs__btn.active {
+    pointer-events: none;
+  }
+
+  .custom-tabs__btn.active ~ .custom-tabs__box {
+    opacity: 1;
   }
 }

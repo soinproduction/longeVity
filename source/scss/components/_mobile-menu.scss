@@ -1,4 +1,17 @@
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    transform: translateX(10px) rotate(2deg);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .mobile-menu {
+  filter: blur(7px);
+  clip-path: circle(0% at 96.5% 5%);
   position: fixed;
   top: 0;
   left: 0;
@@ -6,11 +19,11 @@
   bottom: 0;
   width: 100%;
   z-index: 100;
-  max-height: calc(var(--menu-height) + 40px);
+  height: 100vh;
   background-color: var(--bg-a);
   overflow-y: auto;
-  transition: all .4s linear;
-  transform: translateY(-110%);
+  transition: all .7s cubic-bezier(0.23, 0.93, 0.23, 0.93);
+  // transform: translateX(110%);
   @include tablet {
     max-height: calc(var(--menu-height) + 100px);
   }
@@ -21,7 +34,9 @@
 
 
   &.active {
-    transform: translateY(0);
+    filter: blur(0px);
+    clip-path: circle(140% at 96.5% 5%);
+    transition: all .6s cubic-bezier(0.23, 0.93, 0.6, 0.93);
   }
 
   ul, li {
@@ -166,6 +181,7 @@
         text-fill-color: transparent;
       }
     }
+
 
     .sub-menu {
       grid-gap: 10px clamp(20px, 4.516vw, 56px);

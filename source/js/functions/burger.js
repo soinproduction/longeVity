@@ -36,6 +36,9 @@ burgerClose.addEventListener('click', function(e){
   hideMenuHandler(mobileMenu,burger);
 });
 
+document.querySelector('.fixed-button__close').addEventListener('click', function(){
+  document.querySelector('.fixed-button').classList.add('hide')
+})
 
 
 
