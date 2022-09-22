@@ -85,11 +85,7 @@
     font-size: clamp(22px, 2.604vw, 24px);
     line-height: 100%;
     text-align: center;
-    background: linear-gradient(90deg, #BD9B60 8.19%, #C6A978 87.71%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    color: #BD9B60;
     position: relative;
 
     &:first-child::before {
@@ -98,16 +94,14 @@
       right: 0;
       transform: translateX(50%);
       font-family: var(--font-family);
+      display: flex;
       font-style: normal;
       font-weight: 250;
       font-size: Min(11.719vw,90px);
-      line-height: 100%;
+      line-height: Min(11.719vw,90px);
       text-align: center;
-      background: linear-gradient(90deg, #BD9B60 8.19%, #C6A978 87.71%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
+      color: #BD9B60;
+      // bottom: 0;
 
       @include mobile {
         right: 50%;
@@ -157,5 +151,13 @@
     font-style: normal;
     font-weight: 400;
     color: var(--color-d);
+
+    transition: all .4s;
+    &:hover {
+      transform: translateY(-10%);
+      text-shadow: 4px 4px 9px rgba(0, 0, 0, 0.595);
+      background: linear-gradient(270deg, #bd9b60 8.19%, #c6a978 87.71%);
+      filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.25));
+    }
   }
 }

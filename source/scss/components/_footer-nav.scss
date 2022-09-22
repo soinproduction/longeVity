@@ -32,6 +32,16 @@
     line-height: 100%;
     color: var(--color-a);
 
+    transition: all .2s;
+    &:hover {
+      transform: translateY(-10%);
+      text-shadow: 4px 4px 9px rgba(0, 0, 0, 0.595);
+      color: var(--color-с);
+    }
+
+
+
+
     @include small-tablet {
       font-size: Min(1.823vw, 14px);
     }

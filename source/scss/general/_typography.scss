@@ -1,4 +1,7 @@
 .site-menu {
+  border-radius: 50%;
+  position: relative;
+  z-index: 10;
   svg {
     fill: transparent;
     width: 100%;
@@ -8,6 +11,13 @@
   @include small-tablet {
     width: clamp(34px, 8.073vw, 62px);
     height: clamp(34px, 8.073vw, 62px);
+  }
+
+  transition: all .4s;
+  &:hover {
+    transform: translateY(-10%);
+    text-shadow: 4px 4px 9px rgba(0, 0, 0, 0.595);
+    box-shadow: 5px 5px 27px 5px rgba(0, 0, 0, 0.192);
   }
 }
 
@@ -26,6 +36,7 @@
   padding: 16px 40px;
   position: relative;
   z-index: 1;
+
 
   &::before {
     width: calc(Min(3.774vw, 40px));
@@ -63,6 +74,15 @@
     max-width: 194px;
     padding: 12px 18px;
     font-size: 14px;
+  }
+
+  transition: all .2s;
+
+  &:hover {
+    transform: translateY(-10%);
+    text-shadow: 4px 4px 9px rgba(0, 0, 0, 0.595);
+    background: linear-gradient(270deg, #bd9b60 8.19%, #c6a978 87.71%);
+    // filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.25));
   }
 }
 

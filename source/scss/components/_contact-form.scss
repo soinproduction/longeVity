@@ -112,5 +112,12 @@
     font-size: 14px;
     line-height: 21px;
     color: var(--color-с);
+    transition: .4s;
+
+    &:hover {
+      color: #d8b16d;
+      transform: translateY(-10%);
+      text-shadow: 4px 4px 9px rgba(0, 0, 0, 0.388);
+    }
   }
 }

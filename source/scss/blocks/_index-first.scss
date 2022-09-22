@@ -29,6 +29,8 @@
     max-width: 783px;
     text-align: center;
     grid-gap: 20px;
+    position: relative;
+    z-index: 0 ;
 
     font-family: var(--font-family);
     font-style: normal;
@@ -40,6 +42,18 @@
 
     @include tablet {
       max-width: 520px;
+    }
+
+    &::before {
+      background: radial-gradient(43.46% 43.46% at 52.66% 43.46%, #004976 0%, rgba(0, 73, 118, 0) 100%);
+      background-size: 100%;
+      width: 100vw;
+      position: absolute;
+      top: -60%;
+      bottom: -60%;
+      opacity: .8;
+      content: '';
+      z-index: -1;
     }
   }
 
