@@ -71,7 +71,6 @@
     }
 
     &.active {
-      pointer-events: none;
       color: var(--color-a);
 
       @include mobile {

@@ -2,6 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const accParr = [...document.querySelectorAll('[accordion-init]')]
   accParr.map(function (accordionParrent) {
     if (accordionParrent) {
+
       let multipleSetting = false;
       let breakpoinSetting = false;
       let defaultOpenSetting;
@@ -71,6 +72,19 @@ window.addEventListener('DOMContentLoaded', () => {
         for (const accordion of accordions) {
           accordion.addEventListener('click', handler)
         }
+      }
+      const accordionDefaultOpen = (currentId) => {
+        const defaultOpenContent = accordionParrent.querySelector(`[data-content="${currentId}"]`)
+        const defaultOpenButton = accordionParrent.querySelector(`[data-id="${currentId}"]`)
+        openedAccordion = defaultOpenContent;
+
+        toggleAccordionButton(defaultOpenButton)
+        openAccordion(defaultOpenContent)
+      }
+
+      if (accordionParrent.dataset.default) {
+        defaultOpenSetting = accordionParrent.dataset.default; // получает id аккордиона который будет открыт по умолчанию
+        accordionDefaultOpen(defaultOpenSetting);
       }
 
       activateAccordion(accordions, accordionClickHandler);

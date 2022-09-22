@@ -1,0 +1,123 @@
+.select {
+  position: relative;
+  width: 100%;
+}
+
+.select.active .select__body {
+  height: auto;
+  max-height: 500px;
+}
+
+.select.active {
+  .select__icon {
+    transform: scaleY(-1);
+  }
+  .select__body {
+    display: block;
+  }
+
+  .select__header {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.select__header {
+  display: grid;
+  grid-template-columns: 1fr 10px;
+  grid-gap: 10px;
+  align-items: center;
+  // min-width: 130px;
+  height: 42px;
+  width: 100%;
+  padding: 0 18px;
+  cursor: pointer;
+
+  grid-gap: 8px;
+
+  background: #E5EDF1;
+  border-radius: 30px;
+}
+
+.select__current {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  font-family: var(--font-family);
+  color: var(--color-f);
+  text-transform: capitalize;
+  letter-spacing: 0.05em;
+  max-width: 190px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.select__icon {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.4s;
+}
+
+.select__body {
+  border-radius: 30px !important;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 5;
+
+  display: none;
+  width: 100%;
+  max-height: 0;
+  margin-top: 10px;
+  padding: 0;
+  overflow: hidden;
+
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.select__item {
+  width: 100%;
+  margin: 0 auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  font-family: var(--font-family);
+  color: var(--color-f);
+  text-transform: capitalize;
+  letter-spacing: 0.05em;
+
+  cursor: pointer;
+  opacity: 0.5;
+
+  transition: all 0.4s;
+
+  user-select: none;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.select__wrapp {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 12px 18px 10px !important;
+
+  background: var(--color-d);
+  border: 1px solid  var(--color-e);
+
+  grid-gap: 8px;
+}
+
+.select__item:hover {
+  // background-color: $color--a;
+  color:var(--color-f);
+}

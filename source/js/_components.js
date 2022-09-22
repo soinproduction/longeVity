@@ -7,4 +7,6 @@ import './components/sliders';
 import './components/getDinamicHeight';
 import './components/lightbox';
 import './components/tabs';
+import './components/animate';
+import './components/select';
 

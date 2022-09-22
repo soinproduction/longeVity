@@ -26,6 +26,11 @@ body {
 
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden;
+
+  &.light-body {
+    background-color: var(--body-bg-light);
+    color: var(var(--color-f));
+  }
 }
 
 main {
@@ -159,7 +164,7 @@ input[type="number"] {
   padding: 0 var(--container-offset);
 
   &--mode {
-    max-width: calc(1600px + var(--container-offset));
+    max-width: calc(1100px + calc(var(--container-offset) * 2 ));
   }
 }
 

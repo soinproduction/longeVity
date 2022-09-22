@@ -11,6 +11,7 @@ export default {
   video: [...document.querySelectorAll("[data-video]")],
   startButton: document.querySelector(".start-button"),
   image: document.querySelector(".our-section__image"),
+  plan: document.querySelector(".plan-list__btn"),
 }
 
 

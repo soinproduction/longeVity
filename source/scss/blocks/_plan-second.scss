@@ -1,0 +1,7 @@
+.plan-second {
+  padding: clamp(50px, 5.66vw, 60px) 0 50px;
+
+  @include tablet {
+    padding: clamp(50px, 5.66vw, 60px) 0 clamp(32px, 4.167vw, 65px);
+  }
+}

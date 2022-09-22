@@ -3,32 +3,40 @@ import { disableScroll } from '../functions/disable-scroll';
 import { enableScroll } from '../functions/enable-scroll';
 import { removeClassInArray,addCustomClass, removeCustomClass } from "../functions/customFunctions";
 
+const {overlay, activeClass, modalsButton , modals} = vars;
+
+const commonFunction = function() {
+  removeCustomClass(overlay, activeClass);
+  removeClassInArray(modals, activeClass);
+  enableScroll();
+}
+
+function buttonClickHandler(e,buttonAttribute, activeClass) {
+  e.preventDefault();
+  const currentModalId = e.target.getAttribute(`${buttonAttribute}`);
+  const curentModal = overlay.querySelector(`[data-popup="${currentModalId}"]`);
+
+  addCustomClass(overlay, activeClass);
+  addCustomClass(curentModal, activeClass);
+  disableScroll();
+}
+
+function overlayClickHandler(e, activeClass){
+  const closeBtn = overlay.querySelector(`${'[data-popup]'}.${activeClass} .close`)
+  closeBtn && closeBtn.addEventListener('click', commonFunction);
+  if (e.target === overlay) commonFunction();
+}
+
 function modalInit(buttonsArray, buttonAttribute ,activeClass) {
   buttonsArray.map(function(btn){
-    btn.addEventListener('click', function(e) {
-      e.preventDefault()
-      const currentModalId = e.target.getAttribute(`${buttonAttribute}`)
-      addCustomClass(vars.overlay, activeClass);
-      addCustomClass(vars.overlay.querySelector(`[data-popup="${currentModalId}"]`), activeClass);
-      disableScroll();
-    });
-
+    btn.addEventListener('click', (e) => buttonClickHandler(e, buttonAttribute, activeClass));
   })
 }
 
-vars.overlay?.addEventListener('click', function(e){
-  const closeBtn = vars.overlay.querySelector(`${'[data-popup]'+ '.' + vars.activeClass} .close`)
-  closeBtn && closeBtn.addEventListener('click', commonFunction());
-  if (e.target === vars.overlay) commonFunction();
-});
+overlay?.addEventListener('click', (e) => overlayClickHandler(e, activeClass));
+modalInit(modalsButton, "data-btn-modal", activeClass);
 
-modalInit(vars.modalsButton, "data-btn-modal", vars.activeClass);
 
-const commonFunction = function() {
-  removeCustomClass(vars.overlay, vars.activeClass);
-  removeClassInArray(vars.modals, vars.activeClass);
-  enableScroll();
-}
 
 
 

@@ -1,0 +1,116 @@
+.contact-form {
+  max-width: 473px;
+  width: 100%;
+  background: var(--bg-a);
+  border-radius: 30px;
+  padding: 42px clamp(40px, 3.182vw, 35px) 27px;
+  display: flex;
+  flex-direction: column;
+
+  @include small-tablet {
+    max-width: 100%;
+  }
+
+  @include mobile {
+    padding: 42px 24px 35px;
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 31px;
+    color: var(--color-f);
+    margin-bottom: 52px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 17px;
+    margin-bottom: 26px;
+
+    @include mobile {
+      margin-bottom: 32px;
+    }
+
+  }
+
+  &__label {
+    padding: 0;
+
+    input {
+      padding: 0 0 18px 0;
+      border-bottom: 1px solid var(--color-g);
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 21px;
+      color: var(--color-f);
+
+      &::placeholder {
+        color: inherit;
+      }
+    }
+  }
+
+  &__textarea {
+    padding: 0 0 0 0;
+    border-bottom: 1px solid var(--color-g);
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--color-f);
+
+    &::placeholder {
+      color: inherit;
+    }
+  }
+
+  &__select {
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 24px 20px;
+    align-items: center;
+
+    margin-bottom: clamp(20px, 9.063vw, 29px);
+
+    @include tablet {
+      grid-template-columns: 100%;
+    }
+
+    // @include for-small-tablet {
+    //   min-width: 414px;
+    // }
+  }
+
+  &__name {
+    font-family: var(--color-f);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--color-f);
+  }
+
+  &__checkbox {
+    margin-bottom: clamp(20px, 6.250vw, 36px);
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    grid-gap: 22px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--color-с);
+  }
+}

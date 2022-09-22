@@ -1,3 +1,9 @@
+.light-body {
+  .header__title {
+    color: var(--color-f);
+  }
+}
+
 header {
   position: absolute;
   width: 100%;
@@ -47,7 +53,7 @@ header {
     }
 
     @include mobile {
-      font-size: clapm( 12px,1.981vw,21px);
+      font-size: clamp( 12px,1.981vw,21px);
     }
   }
 

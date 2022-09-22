@@ -27,15 +27,6 @@ import { disableScroll } from './functions/disable-scroll';
 // Реализация включения скролла (не забудьте вызвать функцию)
 import { enableScroll } from './functions/enable-scroll';
 
-// Получение высоты шапки сайта (не забудьте вызвать функцию)
-// import { getHeaderHeight } from './functions/header-height';
-// window.addEventListener("DOMContentLoaded", () => {
-//   getHeaderHeight();
-// });
-// window.addEventListener("resize", () => {
-//   getHeaderHeight();
-// });
-
 
 // Подключение плагина кастом-скролла
 // import 'simplebar';
@@ -55,12 +46,12 @@ import { enableScroll } from './functions/enable-scroll';
 // const rellax = new Rellax('.rellax');
 
 // Подключение событий свайпа на мобильных
-// import 'swiped-events';
-// document.addEventListener('swiped', function(e) {
-//   console.log(e.target);
-//   console.log(e.detail);
-//   console.log(e.detail.dir);
-// });
+import 'swiped-events';
+document.addEventListener('swiped', function(e) {
+  console.log(e.target);
+  console.log(e.detail);
+  console.log(e.detail.dir);
+});
 
 // import { validateForms } from './functions/validate-forms';
 // // const rules1 = [...];
