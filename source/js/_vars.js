@@ -12,6 +12,8 @@ export default {
   startButton: document.querySelector(".start-button"),
   image: document.querySelector(".our-section__image"),
   plan: document.querySelector(".plan-list__btn"),
+  menu: document.querySelector(".mobile-menu__inner"),
+  lang: document.querySelector(".lang-list"),
 }
 
 

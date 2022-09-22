@@ -1,48 +1,41 @@
-// import { disableScroll } from '../functions/disable-scroll';
-// import { enableScroll } from '../functions/enable-scroll';
+import { disableScroll } from '../functions/disable-scroll';
+import { enableScroll } from '../functions/enable-scroll';
+import vars from '../_vars';
+import { elementHeight } from '../functions/customFunctions';
+
+
+
+
+
 // import { getHeaderHeight } from '../functions/header-height';
 
 import {addCustomClass} from '../functions/customFunctions'
 
-// let overlay = document.querySelector('[data-overlay]');
-// let mobileMenu = document.querySelector('.mobile-menu');
+let mobileMenu = document.querySelector('.mobile-menu');
+let burger = document.querySelector('.site-menu');
+let burgerClose = document.querySelector('.mobile-menu__close');
 
+const mobileMenuHandler = function( menu, button) {
+  button.addEventListener('click', function(){
+    elementHeight(vars.menu, "menu-height");
+    menu.classList.toggle('active');
+    button.classList.toggle('active');
+    disableScroll();
 
+  })
+}
 
+const hideMenuHandler = function(menu, button) {
+    menu.classList.remove('active');
+    button.classList.remove('active');
+    enableScroll()
+}
 
-// let burger = document.querySelector('.burger');
-// let burgerActive = document.querySelector('.burger.active');
-// let header = document.querySelector('header');
+mobileMenuHandler(mobileMenu,burger);
+burgerClose.addEventListener('click', function(e){
+  hideMenuHandler(mobileMenu,burger);
+});
 
-// const mobileMenuHandler = function(overlayBg, menu, button,headerTag) {
-//   button.addEventListener('click', function(){
-//     menu.classList.toggle('active');
-//     button.classList.toggle('active');
-//     overlayBg.classList.toggle('active');
-//     headerTag.classList.toggle('active');
-//     document.body.classList.toggle('dis-scroll')
-//     getHeaderHeight();
-//   })
-// }
-
-// const hideMenuHandler = function(overlayBg, menu, button, headerTag) {
-//     menu.classList.remove('active');
-//     button.classList.remove('active');
-//     overlayBg.classList.remove('active');
-//     headerTag.classList.remove('active');
-//     document.body.classList.remove('dis-scroll')
-// }
-
-
-// if (overlay) {
-//   mobileMenuHandler(overlay,mobileMenu,burger,header);
-//   overlay.addEventListener('click', function(e){
-//     if (e.target.classList.contains('overlay')) {
-//       hideMenuHandler(overlay,mobileMenu,burger,header)
-//     }
-//   });
-
-// }
 
 
 

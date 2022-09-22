@@ -35,8 +35,8 @@ window.addEventListener('DOMContentLoaded', () => {
         return accordion.style.maxHeight && accordion.style.maxHeight !== "0px";
       }
 
-      const accordionClickHandler = function () {
-
+      const accordionClickHandler = function (e) {
+        e.preventDefault();
         let curentDataNumber = this.dataset.id;
 
         toggleAccordionButton(this);
